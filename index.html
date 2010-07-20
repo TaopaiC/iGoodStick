@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Test Canvas</title>
+  <meta name="description" content ="test canvas"/>
+  <!--[if IE]><script type="text/javascript" src="javascripts/excanvas.js"></script><![endif]-->
+  <style type="text/css" src="stylesheets/canvas.css"></style>
+</head>
+<body>
+  <canvas id="canvas" width="400" height="400">
+    <p>Your Browser doesnt support canvas.</p>
+  </canvas>
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/canvas.js"></script>
+  <script type="text/javascript">
+    var can;
+    $(document).ready(function() {
+        //draw();
+        can = new DrawCanvas("canvas");
+    } );
+  </script>
+</body>
+</html>
