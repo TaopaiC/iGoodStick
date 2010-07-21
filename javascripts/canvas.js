@@ -1,26 +1,7 @@
-function draw() {
-  var canvas = document.getElementById("canvas");
-  if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
-
-    ctx.fillStyle = "rgb(200,200,0)";
-    ctx.fillRect(10, 10, 55, 50);
-
-    ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
-    ctx.fillRect(30, 30, 55, 50);
-  }
-}
-
 function DrawCanvas(canvas_name) {
   var canvas = this.canvas = document.getElementById(canvas_name);
   var ctx = this.ctx = canvas.getContext('2d');
   var drawcanvas = this.drawcanvas = this;
-
-  ctx.fillStyle = "rgb(200,200,0)";
-  ctx.fillRect(10, 10, 55, 50);
-
-  ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
-  ctx.fillRect(30, 30, 55, 50);
 
   $(canvas).bind("mousedown", function(ev) {drawcanvas.drawStart(ev)});
   $(canvas).bind("mousemove", function(ev) {drawcanvas.drawMove(ev)});
