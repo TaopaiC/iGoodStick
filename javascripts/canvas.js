@@ -26,9 +26,9 @@ function DrawCanvas(canvas_name) {
   $(canvas).bind("mousemove", function(ev) {drawcanvas.drawMove(ev)});
   $(canvas).bind("mouseup",   function(ev) {drawcanvas.drawEnd(ev)});
 
-  $(canvas).bind("touchdown", function(ev) {drawcanvas.drawStart(ev)});
+  $(canvas).bind("touchstart", function(ev) {drawcanvas.drawStart(ev)});
   $(canvas).bind("touchmove", function(ev) {drawcanvas.drawMove(ev)});
-  $(canvas).bind("touchup",   function(ev) {drawcanvas.drawEnd(ev)});
+  $(canvas).bind("touchend",   function(ev) {drawcanvas.drawEnd(ev)});
 }
 
 DrawCanvas.prototype.getXY = function(event) {
